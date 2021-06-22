@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canon | CSR Microsite Proposal</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+    <!-- Custom Style.css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <img src="assets/images/badge.png" alt="" class="canonbadge">
+        <ul id="scene">
+            <li class="bgl layer" data-depth="0.1">
+                <img class="img-fluid" src="assets/images/bg2.jpg" alt="">
+            </li>
+            <li class="lt layer" data-depth="0.2">
+                <img class="img-fluid" src="assets/images/treeleft.png" alt="">
+            </li>
+            <li class="rt layer" data-depth="0.2">
+                <img class="img-fluid" src="assets/images/treeright.png" alt="">
+            </li>
+            <li class="grl grone layer" data-depth="0.1">
+                <img class="img-fluid" src="assets/images/grassone.png" alt="">
+            </li>
+            <li class="grl grtwo layer" data-depth="0.2">
+                <img class="img-fluid" src="assets/images/grasstwo.png" alt="">
+            </li>
+            <li class="clouds layer" data-depth="0.4">
+                <img class="img-fluid cloud-sm" src="assets/images/cloud.png" alt="">
+                <img class="img-fluid cloud-md" src="assets/images/cloud.png" alt="">
+                <img class="img-fluid cloud-lg" src="assets/images/cloud.png" alt="">
+            </li>
+            <li class="layer sparrows" data-depth="0.2">
+                <img class="img-fluid " src="assets/images/sparrows.gif" alt="">
+            </li>
+            <li class="layer tapir" data-depth="0.2">
+                <img class="img-fluid " src="assets/images/tapir-happy.png" alt="">
+            </li>
+            <li class="wood" data-depth="0.5">
+                <img class="img-fluid " src="assets/images/wood-table.png" alt="">
+            </li>
+        </ul>
+        <div class="quiz-sec">
+            <img src="assets/images/sadsun.png" class="img-fluid sad emotion" alt="" style="display:none;">
+            <img src="assets/images/happysun.png" class="img-fluid happy emotion" alt="" style="display:none;">
+            <img src="assets/images/leaf-whl.png" class="img-fluid lw" alt="">
+            <img src="assets/images/leaf-whl2.png" class="img-fluid lbw" alt="">
+            <form action="#">
+                <div class="question living">
+                    <img src="assets/images/tapirhome.png" alt="tapirhomeicon" class="icon home-icon">
+                    <h2 class="question-title">Where do Tapirs live ?</h2>
+                    <div class="ansGrp">
+                        <input type="radio" name="questionOne" id="quesOneA" value="Rivers">
+                        <label for="quesOneA">Rivers</label>
+                    </div>
+                    <div class="ansGrp">
+                        <input type="radio" name="questionOne" id="quesOneB" value="Mountains">
+                        <label for="quesOneB">Mountains</label>
+                    </div>
+                    <div class="ansGrp">
+                        <input type="radio" name="questionOne" id="quesOneC" value="Forests">
+                        <label for="quesOneC">Forests</label>
+                    </div>
+                </div>
+                <div class="question food" style="display: none;">
+                    <img src="assets/images/food.png" alt="tapirfoodicon" class="icon food-icon">
+                    <h2 class="question-title">What type of Tapir's Diet ?</h2>
+                    <div class="ansGrp">
+                        <input type="radio" name="questionTwo" id="quesTwoA" value="Carnivores">
+                        <label for="quesTwoA">Carnivores</label>
+                    </div>
+                    <div class="ansGrp">
+                        <input type="radio" name="questionTwo" id="quesTwoB" value="Herbivores">
+                        <label for="quesTwoB">Herbivores</label>
+                    </div>
+                    <div class="ansGrp">
+                        <input type="radio" name="questionTwo" id="quesTwoC" value="Omnivores">
+                        <label for="quesTwoC">Omnivores</label>
+                    </div>
+                </div>
+                <div class="question species" style="display: none;">
+                    <img src=" assets/images/cute.jpg" alt="cuteTapiricon" class="icon cute-tapir-icon">
+                    <h2 class="question-title">How many Species of Tapir ?</h2>
+                    <div class="ansGrp">
+                        <input type="radio" name="questionThree" id="quesThreeA" value="Four">
+                        <label for="quesThreeA">Four</label>
+                    </div>
+                    <div class="ansGrp">
+                        <input type="radio" name="questionThree" id="quesThreeB" value="Three">
+                        <label for="quesThreeB">Three</label>
+                    </div>
+                    <div class="ansGrp">
+                        <input type="radio" name="questionThree" id="quesThreeC" value="Two">
+                        <label for="quesThreeC">Two</label>
+                    </div>
+                </div>
+                <div class="question final" style="display: none;">
+                    <img src=" assets/images/leavering.png" alt="final" class="icon final-icon">
+                    <h2 class="question-title thankstitle">Thank You <br /> for <br />Participating</h2>
+                    <a href="form.html" class="pledgeBtn">
+                        <img src="assets/images/pledgebtn.png" alt="">
+                    </a>
+                </div>
+            </form>
+        </div>
+        <div class="mobileTabTapir">
+            <img src="assets/images/tapir-happy.png" alt="tapir" class="img-fluid">
+        </div>
+    </div>
+
+
+    <script src="assets/js/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/parallax-min.js"></script>
+    <!-- Bootstrap 5 Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+
+
+</body>
+
+</html>

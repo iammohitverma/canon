@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canon | CSR Microsite Proposal</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+    <!-- Custom Style.css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <img src="assets/images/badge.png" alt="" class="canonbadge">
+        <ul id="scene">
+            <li class="bgl layer" data-depth="0.1">
+                <img class="img-fluid" src="assets/images/bg2.jpg" alt="">
+            </li>
+            <li class="lt layer" data-depth="0.2">
+                <img class="img-fluid" src="assets/images/treeleft.png" alt="">
+            </li>
+            <li class="rt layer" data-depth="0.2">
+                <img class="img-fluid" src="assets/images/treeright.png" alt="">
+            </li>
+            <li class="grl grone layer" data-depth="0.1">
+                <img class="img-fluid" src="assets/images/grassone.png" alt="">
+            </li>
+            <li class="grl grtwo layer" data-depth="0.2">
+                <img class="img-fluid" src="assets/images/grasstwo.png" alt="">
+            </li>
+            <li class="clouds layer" data-depth="0.4">
+                <img class="img-fluid cloud-sm" src="assets/images/cloud.png" alt="">
+                <img class="img-fluid cloud-md" src="assets/images/cloud.png" alt="">
+                <img class="img-fluid cloud-lg" src="assets/images/cloud.png" alt="">
+            </li>
+            <li class="layer sparrows" data-depth="0.2">
+                <img class="img-fluid " src="assets/images/sparrows.gif" alt="">
+            </li>
+            <li class="layer tapir" data-depth="0.2">
+                <img class="img-fluid " src="assets/images/tapir-happy.png" alt="">
+            </li>
+            <li class="wood" data-depth="0.5">
+                <img class="img-fluid " src="assets/images/wood-table.png" alt="">
+            </li>
+        </ul>
+        <div class="quiz-sec signUpform">
+            <img src="assets/images/sadsun.png" class="img-fluid sad emotion" alt="" style="display:none;">
+            <img src="assets/images/happysun.png" class="img-fluid happy emotion" alt="" style="display:none;">
+            <img src="assets/images/leaf-whl.png" class="img-fluid lw" alt="">
+            <img src="assets/images/leaf-whl2.png" class="img-fluid lbw" alt="">
+
+            <form action="#" id="signup" onsubmit="return formVal()">
+                <div class="mb-3">
+                    <label for="exampleInputName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+                    <small id="nameHelp" class="form-text text-danger"></small>
+                    <!-- <div id="nameHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-danger"></small>
+                    <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPhone" class="form-label">Phone Number</label>
+                    <input type="number" class="form-control" id="exampleInputPhone">
+                    <small id="phoneHelp" class="form-text text-danger"></small>
+                </div>
+                <button type="submit" class="btn pledgeBtn">
+                    <img src="assets/images/submit.png" alt="submit">
+                </button>
+            </form>
+
+            <div class="question afterSubmit final" style="display: none;">
+                <img src=" assets/images/leavering.png" alt="final" class="icon final-icon">
+                <h2 class="question-title thankstitle">Thank you for your Support</h2>
+                <!-- <a href="form.html" class="pledgeBtn">
+                    <img src="assets/images/pledgebtn.png" alt="">
+                </a> -->
+            </div>
+        </div>
+        <div class="mobileTabTapir">
+            <img src="assets/images/tapir-happy.png" alt="tapir" class="img-fluid">
+        </div>
+    </div>
+
+
+    <script src="assets/js/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/parallax-min.js"></script>
+    <!-- Bootstrap 5 Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        // Script for Form validation
+        function formVal() {
+            var nameVal = document.getElementById("exampleInputName").value;
+            var emailVal = document.getElementById("exampleInputEmail1").value;
+            var phoneVal = document.getElementById("exampleInputPhone").value;
+            if (nameVal == "") {
+                document.getElementById("nameHelp").innerHTML = "Please Enter your Name";
+                return false;
+            } else if ((nameVal.length <= 2) || (nameVal.length >= 20)) {
+                document.getElementById("nameHelp").innerHTML = "Your Name must be 2 to 20 Character.";
+                return false;
+            } else if (!isNaN(nameVal)) {
+                document.getElementById("nameHelp").innerHTML = "Please Enter a valid Name.";
+                return false;
+            } else if (emailVal == "") {
+                document.getElementById("emailHelp").innerHTML = "Please Enter your email";
+                document.getElementById("nameHelp").innerHTML = " ";
+                return false;
+            } else if (emailVal.indexOf('@') <= 0) {
+                document.getElementById("emailHelp").innerHTML = "Invalid @ position";
+                document.getElementById("nameHelp").innerHTML = " ";
+                return false;
+            } else if ((emailVal.charAt(emailVal.length - 4) != '.') && (emailVal.charAt(emailVal.length - 3) != '.')) {
+                document.getElementById("emailHelp").innerHTML = "Invalid ' . ' position";
+                document.getElementById("nameHelp").innerHTML = " ";
+                return false;
+            } else if (/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(emailVal) == false) {
+                $('#emailHelp').text('Please Enter a valid Email Address.');
+                document.getElementById("nameHelp").innerHTML = " ";
+                return false;
+            } else if (phoneVal == "") {
+                document.getElementById("phoneHelp").innerHTML = "Please Enter your phone";
+                document.getElementById("emailHelp").innerHTML = " ";
+                document.getElementById("nameHelp").innerHTML = " ";
+                return false;
+            } else if (isNaN(phoneVal)) {
+                document.getElementById("phoneHelp").innerHTML = "Please Enter only Digits";
+                document.getElementById("emailHelp").innerHTML = " ";
+                document.getElementById("nameHelp").innerHTML = " ";
+                return false;
+            } else if (phoneVal.length !== 10 && phoneVal.length !== 11 && phoneVal.length !== 12) {
+                document.getElementById("phoneHelp").innerHTML = "Please enter Valid Phone Number.";
+                document.getElementById("emailHelp").innerHTML = " ";
+                document.getElementById("nameHelp").innerHTML = " ";
+                return false;
+            }
+            else {
+
+                $(".quiz-sec").removeClass("active");
+                setTimeout(function () {
+                    $("#signup").hide();
+                    $(".lw").hide();
+                    $(".lbw").hide();
+                    $(".afterSubmit").show();
+                }, 700);
+
+                setTimeout(function () {
+                    $(".quiz-sec").addClass("active");
+                }, 1500);
+
+                setTimeout(function () {
+                    $(".quiz-sec").removeClass("active");
+                    return true;
+                }, 15000);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
